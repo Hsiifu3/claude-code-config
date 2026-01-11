@@ -1,0 +1,56 @@
+{
+  "mcpServers": {
+    "gemini-cli": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["<path-to>/gemini-mcp-tool/dist/index.js"],
+      "env": {
+        "GEMINI_PREVIEW_FEATURES": "true"
+      }
+    },
+    "codex": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["<npm-global-path>/node_modules/codex-mcp-server/dist/index.js"],
+      "env": {
+        "OPENAI_API_KEY": "<your-openai-api-key>"
+      }
+    },
+    "zotero": {
+      "type": "stdio",
+      "command": "<conda-path>/Scripts/zotero-mcp.exe",
+      "args": ["serve"],
+      "env": {
+        "ZOTERO_LOCAL": "true"
+      }
+    },
+    "zotero-writer": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["<path-to>/zotero_writer.py"],
+      "env": {}
+    },
+    "github": {
+      "type": "stdio",
+      "command": "<docker-path>/docker.exe",
+      "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<your-github-pat>"
+      }
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "<docker-path>/docker.exe",
+      "args": ["run", "-i", "--rm", "mcp/playwright:latest"],
+      "env": {}
+    },
+    "wolfram-alpha": {
+      "type": "stdio",
+      "command": "<docker-path>/docker.exe",
+      "args": ["run", "-i", "--rm", "-e", "WOLFRAM_API_KEY", "mcp/wolfram-alpha:latest"],
+      "env": {
+        "WOLFRAM_API_KEY": "<your-wolfram-app-id>"
+      }
+    }
+  }
+}
