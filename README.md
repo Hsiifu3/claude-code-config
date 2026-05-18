@@ -14,11 +14,11 @@ My personal Claude Code MCP servers and skills configuration.
 | playwright | Docker | Browser automation |
 | wolfram-alpha | Docker | Computational intelligence |
 
-## Skills (144 total)
+## Skills (146 total)
 
-Scientific skills from [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills).
+Scientific skills from [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) plus additional custom skills from Mac mini.
 
-### Categories
+### Scientific Skills Categories
 
 - **Databases**: PubMed, ChEMBL, UniProt, PDB, KEGG, etc.
 - **Analysis**: scanpy, scikit-learn, statsmodels, PyTorch Lightning, etc.
@@ -26,6 +26,14 @@ Scientific skills from [K-Dense-AI/claude-scientific-skills](https://github.com/
 - **Writing**: scientific-writing, literature-review, peer-review, etc.
 - **Chemistry**: rdkit, datamol, deepchem, etc.
 - **Bioinformatics**: biopython, bioservices, scanpy, etc.
+
+### Additional Custom Skills (from Mac mini)
+
+| Skill | Description |
+|-------|-------------|
+| codex-orchestration | Codex orchestration workflows |
+| word-docx | Microsoft Word / DOCX document handling |
+| word-paper-revision | DOCX track changes for paper revision |
 
 ## Configuration Files
 
@@ -70,3 +78,8 @@ Copy-Item -Path "claude-scientific-skills/scientific-skills/*" -Destination "$en
 | User settings | `%USERPROFILE%\.claude\settings.json` |
 | User skills | `%USERPROFILE%\.claude\skills\` |
 | Claude Desktop | `%APPDATA%\Claude\claude_desktop_config.json` |
+
+## Sync Notes
+
+- `citation-management` updated with Phase 2.5 (metadata enrichment via web search)
+- Custom skills copied from Mac mini: codex-orchestration, word-docx, word-paper-revision

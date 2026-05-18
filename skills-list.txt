@@ -154,3 +154,11 @@ paper-2-web
 perplexity-search
 research-lookup
 scholar-evaluation
+
+## Additional Skills (from Mac mini)
+codex-orchestration
+word-docx
+word-paper-revision
+
+---
+*Total: 146 skills*
