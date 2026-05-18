@@ -1,0 +1,7 @@
+# Test files
+.tmp_test*
+*.docx
+
+# Output files
+output*
+*.tmp*
